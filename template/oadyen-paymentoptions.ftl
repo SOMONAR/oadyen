@@ -26,9 +26,11 @@ here comes the result from chckt.checkout
 	
 	var sdkConfigObj = { 'context' : 'test' };
 	var node = '#adyen';
-	var paymentSession = '${StringUtil.wrapString(paymentSession)}';
-	var checkout = chckt.checkout(paymentSession, node, sdkConfigObj); 
-	chckt.hooks.beforeComplete = function(node, paymentData) {
+	if(paymentSession) {
+		var paymentSession = '${StringUtil.wrapString(paymentSession)}';
+		var checkout = chckt.checkout(paymentSession, node, sdkConfigObj); 
+		chckt.hooks.beforeComplete = function(node, paymentData) {
+	}
    // 'node' is a reference to the Checkout container HTML node.
    // 'paymentData' is the result of the payment, and contains the 'payload'.
 
