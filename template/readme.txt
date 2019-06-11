@@ -1,0 +1,1 @@
+Put your component specific templates in this folder.
