@@ -52,7 +52,7 @@
 
     <!-- web applications; will be mounted when using the embedded container -->
     <webapp name="oadyen"
-        title="ADYEN"
+        title="ADYEN Integration"
         server="default-server"
         location="webapp/oadyen"
         base-permission="OFBTOOLS,oadyen"
