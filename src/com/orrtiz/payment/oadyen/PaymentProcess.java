@@ -64,7 +64,7 @@ public class PaymentProcess {
     /** Initiate AdyenEvents Request 
      * @throws IOException */
     
-    public static String payloadResponse (httpServletRequest request, HttpServletResponse response) throws IOException {
+    public static String payloadResponse (HttpServletRequest request, HttpServletResponse response) throws IOException {
     	Locale locale = UtilHttp.getLocale(request);
         Delegator delegator = (Delegator) request.getAttribute("delegator");
         LocalDispatcher dispatcher = (LocalDispatcher) request.getAttribute("dispatcher");
