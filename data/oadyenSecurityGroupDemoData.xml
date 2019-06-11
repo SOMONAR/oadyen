@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <entity-engine-xml>
-    <SecurityGroupPermission groupId="FULLADMIN" permissionId="oadyen_ADMIN"/>
+
 </entity-engine-xml>
