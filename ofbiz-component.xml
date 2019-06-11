@@ -36,5 +36,8 @@
         server="default-server"
         location="webapp/oadyen"
         base-permission="OFBTOOLS,oadyen"
-        mount-point="/oadyen"/>
+        mount-point="/oadyen"
+        menu-name="secondary"
+        />
+
 </ofbiz-component>
