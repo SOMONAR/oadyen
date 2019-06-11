@@ -184,7 +184,7 @@
         systemPropertyId="apiKey.test" 
         description="ADYEN api key for testing purposes" 
         systemResourceId="oadyen"
-        systemPropertyValue="AQEkhmfuXNWTK0Qc+iSDnWk3qeWJar26OwtZ0YBVwMj4TTbQ8KVCEMFdWw2+5HzctViMSCJMYAc=-lyP67E1WqoRpeJYneL3Qsvbvk+0Fag8DkOl6u2ECcsI=-QrXg6ad97Ddbk9aS " 
+        systemPropertyValue="Put your test api key here" 
         />
         
     <SystemProperty 
