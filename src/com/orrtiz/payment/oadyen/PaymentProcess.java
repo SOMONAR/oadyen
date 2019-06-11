@@ -53,7 +53,6 @@ import org.ofbiz.service.ModelService;
 import org.ofbiz.entity.transaction.GenericTransactionException;
 import org.ofbiz.entity.transaction.TransactionUtil;
 
-
 public class PaymentProcess {
     
     public static final String module = AdyenClient.class.getName();
