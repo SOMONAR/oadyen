@@ -7,5 +7,7 @@
     <SecurityPermission description="ALL operations in the oadyen Component." permissionId="oadyen_ADMIN"/>
 
     <SecurityGroupPermission groupId="SUPER" permissionId="oadyen_ADMIN"/>
+    <SecurityGroup groupId="oadyen_ADMIN" description="Admin group for ADYEN configuration"/>
+    <SecurityGroupPermission groupId="oadyen_ADMIN" permissionId="oadyen_ADMIN"/>
 
 </entity-engine-xml>
