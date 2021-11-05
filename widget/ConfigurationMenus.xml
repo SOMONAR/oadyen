@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This file is subject to the terms and conditions defined in the file 'LICENSE', 
+which is part of this (source code) package.
+
+Unless required by applicable law or agreed to in writing, software distributed 
+under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, 
+either express or implied.
+
+See the License for the specific language governing permissions and limitations
+under the License.
+ -->
+<menus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns="http://ofbiz.apache.org/Widget-Menu" 
+    xsi:schemaLocation="http://ofbiz.apache.org/Widget-Menu http://ofbiz.apache.org/dtds/widget-menu.xsd">
+    <menu name="ConfigurationTabBar" extends="CommonTabBarMenu" extends-resource="component://common/widget/CommonMenus.xml"
+          default-menu-item-name="systemProperties">
+        <menu-item name="systemProperties" title="${uiLabelMap.SystemProperties}">
+            <condition>
+                <and>
+                    <or>
+                        <if-has-permission permission="${activeApp}" action="_ADMIN"/>
+                    </or>
+                </and>
+            </condition>
+            <link target="systemproperties"/>
+        </menu-item>
+    </menu>
+    
+    <menu name="ConfigurationSubTabBar" extends="CommonTabBarMenu" extends-resource="component://common/widget/CommonMenus.xml"
+          menu-container-style="button-bar button-style-2">
+        <menu-item name="createSystemProperty" title="${uiLabelMap.NewSystemProperty}">
+            <condition>
+                <or>
+                    <if-has-permission permission="${activeApp}" action="_ADMIN"/>
+                </or>
+            </condition>
+            <link target="newsystemproperty">
+                <parameter param-name="systemResourceId" value="${activeApp}"/>
+            </link>
+        </menu-item>
+    </menu>
+</menus>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This file is subject to the terms and conditions defined in the file 'LICENSE', 
+which is part of this (source code) package.
+
+Unless required by applicable law or agreed to in writing, software distributed 
+under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, 
+either express or implied.
+
+See the License for the specific language governing permissions and limitations
+under the License.
+ -->
+
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns="http://ofbiz.apache.org/Widget-Screen" 
+    xsi:schemaLocation="http://ofbiz.apache.org/Widget-Screen http://ofbiz.apache.org/dtds/widget-screen.xsd">
+    <screen name="main">
+        <section>
+            <actions>
+                <set field="headerItem" value="main"/><!-- this highlights the selected menu-item with name "main" -->
+            </actions>
+            <widgets>
+                <decorator-screen name="oadyenCommonDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="Test">
+        <section>
+            <actions>
+                <set field="layoutSettings.javaScripts[]" value="https://checkoutshopper-test.adyen.com/checkoutshopper/assets/js/sdk/checkoutSDK.1.6.0.min.js" global="true"/>
+                <set field="headerItem" value="main"/><!-- this highlights the selected menu-item with name "main" -->
+            </actions>
+            <widgets>
+                <decorator-screen name="oadyenCommonDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <section>
+                            <widgets>
+                                <screenlet title="${uiLabelMap.Entry}">
+                                    <include-form name="Test" location="component://${activeApp}/widget/forms/${activeApp}-Forms.xml"/>
+                                </screenlet>
+                                <screenlet title="${uiLabelMap.Result}">
+                                    <container id="resultDetails"/>
+                                </screenlet>
+                            </widgets>
+                        </section>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="AdyenPayment">
+        <section>
+            <actions>
+                <set field="headerItem" value="adyenpayment"/><!-- this highlights the selected menu-item with name "main" -->
+                <script location="component://oadyen/script/com/orrtiz/payment/oadyen.groovy"/>
+                <set field="paymentSession" value="${parameters.paymentSession}"/>
+                <set field="layoutSettings.javaScripts[]" value="https://checkoutshopper-test.adyen.com/checkoutshopper/assets/js/sdk/checkoutSDK.1.6.0.min.js" global="true"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="oadyenBlankDecorator" location="component://oadyen/widget/CommonScreens.xml">
+                    <decorator-section name="body">
+                        <section>
+                            <widgets>
+                                   <platform-specific>
+                                    <html>
+                                        <html-template location="component://oadyen/template/oadyen-paymentoptions.ftl"/>
+                                    </html>
+                                   </platform-specific>
+                            </widgets>
+                        </section>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="AdyenPaymentTest">
+        <section>
+            <actions>
+                <set field="headerItem" value="adyenpayment"/><!-- this highlights the selected menu-item with name "main" -->
+                <set field="layoutSettings.javaScripts[]" value="https://checkoutshopper-test.adyen.com/checkoutshopper/assets/js/sdk/checkoutSDK.1.6.0.min.js" global="true"/>
+                   <script location="component://oadyen/script/com/orrtiz/payment/oadyen-test.groovy"/>
+                <set field="paymentSession" value="${parameters.paymentSession}"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="oadyenBlankDecorator" location="component://oadyen/widget/CommonScreens.xml">
+                    <decorator-section name="body">
+                        <section>
+                            <widgets>
+                            <!-- 
+                                <screenlet title="parameters">
+                                    <container id="your-parameters-div">
+                                        <label>${parameters}</label>
+                                    </container>
+                                </screenlet>
+                                <screenlet title="session">
+                                    <container id="your-session-div">
+                                        <label>${paymentSession}</label>
+                                    </container>
+                                </screenlet>
+                                 -->
+                                 <platform-specific>
+                                       <html>
+                                           <html-template location="component://oadyen/template/oadyen-paymentoptions.ftl"/>
+                                       </html>
+                                   </platform-specific>
+                                    
+                            </widgets>
+                        </section>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="TestReview">
+        <section>
+            <actions>
+                <set field="headerItem" value="adyenpayment"/><!-- this highlights the selected menu-item with name "main" -->
+                <set field="layoutSettings.javaScripts[]" value="https://checkoutshopper-test.adyen.com/checkoutshopper/assets/js/sdk/checkoutSDK.1.6.0.min.js" global="true"/>
+                   <script location="component://oadyen/script/com/orrtiz/payment/oadyen-payload.groovy"/>
+                <set field="payload" value="${parameters.payload}"/>
+                <set field="pspReference" value="${parameters.pspReference}"/>
+                <set field="authResponse" value="${parameters.authResponse}"/>
+                <set field="merchantReference" value="${parameters.merchantReference}"/>
+                <set field="paymentMethod" value="${parameters.paymentMethod}"/>
+                <set field="additionalData" value="${parameters.additionalData}"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="oadyenBlankDecorator" location="component://oadyen/widget/CommonScreens.xml">
+                    <decorator-section name="body">
+                        <section>
+                            <widgets>
+                                <screenlet title="parameters">
+                                    <container id="your-parameters-div">
+                                        <label>${parameters}</label>
+                                    </container>
+                                </screenlet>
+                                <screenlet title="payload">
+                                    <container id="your-session-div">
+                                        <label>${payload}</label>
+                                    </container>
+                                </screenlet>
+                                 <platform-specific>
+                                       <html>
+                                           <html-template location="component://oadyen/template/oadyen-payload.ftl"/>
+                                       </html>
+                                   </platform-specific>
+                                   <screenlet>
+                                       <include-form location="component://oadyen/widget/forms/oadyen-forms.xml" name="PaymentDetails"/>
+                                   </screenlet>
+                            </widgets>
+                        </section>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+</screens>

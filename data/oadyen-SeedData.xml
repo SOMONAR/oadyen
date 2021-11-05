@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This file is subject to the terms and conditions defined in the file 'LICENSE', 
+which is part of this (source code) package.
+
+Unless required by applicable law or agreed to in writing, software distributed 
+under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, 
+either express or implied.
+
+See the License for the specific language governing permissions and limitations
+under the License.
+ -->
+<entity-engine-xml>
+    
+    <Enumeration description="Payment Notification Page" enumCode="PAY_NOTIFY" enumId="PRDS_PAY_NOTIFY" enumTypeId="PRDS_EMAIL" sequenceId="21"/>
+    <Enumeration description="Payment Redirect Page" enumCode="PAY_REDIRECT" enumId="PRDS_PAY_REDIRECT" enumTypeId="PRDS_EMAIL" sequenceId="22"/>
+    <Enumeration description="Payment Cancel Page" enumCode="PAY_CANCEL" enumId="PRDS_PAY_CANCEL" enumTypeId="PRDS_EMAIL" sequenceId="23"/>
+    
+    <PaymentMethodType description="ADYEN (EXT)" 
+        paymentMethodTypeId="EXT_oadyen"/>
+    
+    <PaymentGatewayConfigType 
+        paymentGatewayConfigTypeId="EXT" 
+        hasTable="N" 
+        description="External Gateway Configuration"/>
+    
+    <PaymentGatewayConfigType 
+        paymentGatewayConfigTypeId="oadyen" 
+        hasTable="N" 
+        parentTypeId="EXT"
+        description="ADYEN Payment Gateway Configuration"/>
+    
+    <PaymentGatewayConfig 
+        paymentGatewayConfigId="oadyen" 
+        paymentGatewayConfigTypeId="oadyen" 
+        description="ADYEN Config"/>
+    
+
+</entity-engine-xml>

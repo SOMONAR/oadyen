@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This file is subject to the terms and conditions defined in the file 'LICENSE', 
+which is part of this (source code) package.
+
+Unless required by applicable law or agreed to in writing, software distributed 
+under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, 
+either express or implied.
+
+See the License for the specific language governing permissions and limitations
+under the License.
+ -->
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/ofbiz-properties.xsd">
+    <property key="1000">
+        <value xml:lang="en">Unknown message type</value>
+    </property>
+    <property key="1001">
+        <value xml:lang="en">Invalid amount</value>
+    </property>
+    <property key="1002">
+        <value xml:lang="en">Invalid currency</value>
+    </property>
+    <property key="1003">
+        <value xml:lang="en">Merchant account ID invalid</value>
+    </property>
+    <property key="1004">
+        <value xml:lang="en">Merchant Site ID invalid</value>
+    </property>
+    <property key="1005">
+        <value xml:lang="en">Merchant site security code invalid</value>
+    </property>
+    <property key="1006">
+        <value xml:lang="en">Transaction ID invalid</value>
+    </property>
+    <property key="1007">
+        <value xml:lang="en">IP-address invalid</value>
+    </property>
+    <property key="1008">
+        <value xml:lang="en">Invalid description</value>
+    </property>
+    <property key="1010">
+        <value xml:lang="en">Invalid variable</value>
+    </property>
+    <property key="1011">
+        <value xml:lang="en">Customer Account ID invalid</value>
+    </property>
+    <property key="1012">
+        <value xml:lang="en">Customer Security Code invalid</value>
+    </property>
+    <property key="1013">
+        <value xml:lang="en">Signature invalid</value>
+    </property>
+    <property key="1014">
+        <value xml:lang="en">Unspecified error</value>
+    </property>
+    <property key="1015">
+        <value xml:lang="en">Unknown account</value>
+    </property>
+    <property key="1016">
+        <value xml:lang="en">Missing data</value>
+    </property>
+    <property key="1017">
+        <value xml:lang="en">Insufficient funds</value>
+    </property>
+    <property key="1018">
+        <value xml:lang="en">Invalid country code</value>
+    </property>
+    <property key="1019">
+        <value xml:lang="en">Site is not active</value>
+    </property>
+    <property key="1020">
+        <value xml:lang="en">Account is blocked</value>
+    </property>
+    <property key="1021">
+        <value xml:lang="en">Cannot create transaction</value>
+    </property>
+    <property key="1022">
+        <value xml:lang="en">Cannot start a transaction</value>
+    </property>
+    <property key="1023">
+        <value xml:lang="en">No gateway (Payment method) available</value>
+    </property>
+    <property key="1024">
+        <value xml:lang="en">Transaction refused</value>
+    </property>
+    <property key="1025">
+        <value xml:lang="en">Only one currency allowed in shopping cart</value>
+    </property>
+    <property key="1026">
+        <value xml:lang="en">Cart currency must equal transaction currency</value>
+    </property>
+    <property key="1027">
+        <value xml:lang="en">Cart amount must equal transaction amount</value>
+    </property>
+    <property key="1028">
+        <value xml:lang="en">Incorrect tax rate in rule</value>
+    </property>
+    <property key="1029">
+        <value xml:lang="en">Incorrect tax rate for a product</value>
+    </property>
+    <property key="1030">
+        <value xml:lang="en">Incorrect currency for a product</value>
+    </property>
+    <property key="1031">
+        <value xml:lang="en">Incorrect price for a product</value>
+    </property>
+    <property key="1032">
+        <value xml:lang="en">Invalid API key</value>
+    </property>
+    <property key="1033">
+        <value xml:lang="en">Error fetching refund info</value>
+    </property>
+    <property key="1034">
+        <value xml:lang="en">Cannot refund transaction</value>
+    </property>
+    <property key="1035">
+        <value xml:lang="en">Invalid signature</value>
+    </property>
+    <property key="1036">
+        <value xml:lang="en">Invalid iDEAL issuer ID</value>
+    </property>
+    <property key="9999">
+        <value xml:lang="en">Unknown error</value>
+    </property>
+</resource>
