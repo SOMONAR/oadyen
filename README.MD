@@ -1,7 +1,7 @@
 # oadyen
-3rd party FINTECH integration component for Apache OFBiz and derivatives for Adyen&trade; as a separate and optional hot-deploy component. This component enables you to configure your ADYEN integration and provides templates for inclusion in your OFBiz&trade; and derivatives web store.
+3rd party FINTECH integration component regarding ADYEN™; for Apache OFBiz and derivatives as a separate and optional hot-deploy component. This component enables you to configure your ADYEN integration and provides templates for inclusion in your OFBiz&trade; and derivatives web store.
 
-For more information on ADYEN, visit [their site, here](http://www.adyen.com).
+For more information on ADYEN&trade;, visit [their site, here](http://www.adyen.com).
 
 **ADYEN works with following acquirers:**
 
@@ -21,3 +21,7 @@ Austria, Australia, Belgium, Canada, Chech,, Finland, France, Germany, Ireland, 
 Instructions on how to implement can be found here: https://github.com/ORRTIZ/oadyen/wiki/How-to-implement
 ##Issues
 For an overview of open and closed issue, see: [https://github.com/ORRTIZ/oadyen/issues](https://github.com/ORRTIZ/oadyen/issues)
+
+There are 2 flavours:
+* for OFBiz implementations working with the Ant build system
+* for OFBiz implementations working with the Gradle build system
