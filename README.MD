@@ -2,7 +2,7 @@
 3rd party FINTECH integration component for Apache OFBiz and derivatives for Adyen&trade; as a separate and optional hot-deploy component. This component enables you to configure your ADYEN integration and provides templates for inclusion in your OFBiz&trade; and derivatives web store.
 
 For more information on ADYEN, visit [their site, here](http://www.adyen.com).
- 
+
 **ADYEN works with following acquirers:**
 
 ![American Express](https://www.multisafepay.com/fileadmin/user_upload/amex-teaser.png "American Express")
