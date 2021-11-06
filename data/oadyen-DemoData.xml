@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This file is subject to the terms and conditions defined in the file 'LICENSE', 
+which is part of this (source code) package.
+
+Unless required by applicable law or agreed to in writing, software distributed 
+under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, 
+either express or implied.
+
+See the License for the specific language governing permissions and limitations
+under the License.
+-->
+<entity-engine-xml>
+    
+    <GlAccount 
+        glAccountId="122500" 
+        accountCode="122500"
+        parentGlAccountId="122000" 
+        glAccountClassId="CURRENT_ASSET" 
+        glAccountTypeId="MRCH_STLMNT_ACCOUNT" 
+        glResourceTypeId="MONEY"
+        accountName="ACCOUNTS RECEIVABLE - ADYEN" 
+        description=""/>
+    
+    <PaymentMethodTypeGlAccount 
+        organizationPartyId="Company" 
+        paymentMethodTypeId="EXT_oadyen" 
+        glAccountId="122500"/>
+    
+    <ProductStorePaymentSetting 
+        applyToAllProducts="Y" 
+        paymentGatewayConfigId="oadyen" 
+        paymentMethodTypeId="EXT_oadyen" 
+        paymentServiceTypeEnumId="PRDS_PAY_EXTERNAL" 
+        productStoreId="9000"/>
+        
+</entity-engine-xml>

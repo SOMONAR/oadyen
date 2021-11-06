@@ -1,0 +1,1 @@
+Put your component specific external libraries (.jar files)s in this folder.
